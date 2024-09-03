@@ -8,3 +8,5 @@ const store = configureStore({
         users: usersReducer,
     }
 })
+
+export default store;
