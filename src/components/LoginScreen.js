@@ -15,7 +15,7 @@ const LoginScreen = ({ navigation }) => {
         validationSchema={LoginSchema}
         onSubmit={values => {
           console.log(values)
-          navigation.navigate('todo')
+          navigation.navigate('user')
         }}
       >
         {({ handleChange, handleBlur, handleSubmit, values, errors, touched }) =>
