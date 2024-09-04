@@ -32,7 +32,7 @@ export default function UserScreen({ navigation }) {
             <View style={styles.buttonContainer}>
               <TouchableOpacity
                 style={styles.button}
-                onPress={() => navigation.navigate('UpdateUser', { user: item })}
+                onPress={() => navigation.navigate('updateUser', { user: item })}
               >
                 <Text style={styles.buttonText}>Update</Text>
               </TouchableOpacity>
