@@ -7,6 +7,7 @@ import UserScreen from './src/components/UserScreen';
 import { Provider } from 'react-redux';
 import store from './src/redux/store';
 import AddUser from './src/components/AddUser';
+import UserProfile from './src/components/UserProfileScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ export default function App() {
           <Stack.Screen name='todo' component={ToDoScreen} />
           <Stack.Screen name='user' component={UserScreen} />
           <Stack.Screen name='addUser' component={AddUser} />
+          <Stack.Screen name='userProfile' component={UserProfile} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
