@@ -26,7 +26,7 @@ export default function UserList({ navigation }) {
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.card}
-            onPress={() => navigation.navigate('UserProfile', { user: item })}
+            onPress={() => navigation.navigate('userProfile', { user: item })}
           >
             <Text style={styles.userName}>{item.name}</Text>
             <View style={styles.buttonContainer}>
