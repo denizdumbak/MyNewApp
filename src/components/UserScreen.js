@@ -3,7 +3,7 @@ import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteUser, fetchUsers } from '../redux/UserReducer';
 
-export default function UserList({ navigation }) {
+export default function UserScreen({ navigation }) {
   const dispatch = useDispatch();
   const { data, status, error } = useSelector(state => state.users);
 
