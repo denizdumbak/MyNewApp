@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Text, Button, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteUser, fetchUsers } from '../redux/UserReducer';
 
@@ -51,7 +51,7 @@ export default function UserList({ navigation }) {
       <TouchableOpacity
         style={styles.addButton}
         title="Add User"
-        onPress={() => navigation.navigate('AddUser')}
+        onPress={() => navigation.navigate('addUser')}
       >
         <Text style={styles.buttonText}>Add User</Text>
       </TouchableOpacity>
