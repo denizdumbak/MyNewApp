@@ -12,7 +12,7 @@ export default function AddUser({ navigation }) {
 
     const generateId = (users) => {
         const maxId = users.reduce((max, user) => Math.max(max, parseInt(user.id)), 0);
-        return (maxId + 1).toString();
+        return (maxId + 1);
     };
 
     const handleAddUser = (values) => {
