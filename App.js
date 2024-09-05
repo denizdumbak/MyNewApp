@@ -9,6 +9,7 @@ import store from './src/redux/store';
 import AddUser from './src/components/AddUser';
 import UserProfile from './src/components/UserProfileScreen';
 import UpdateUser from './src/components/UpdateUser';
+import AddToDo from './src/components/AddToDo';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,6 +25,7 @@ export default function App() {
           <Stack.Screen name='addUser' component={AddUser} />
           <Stack.Screen name='userProfile' component={UserProfile} />
           <Stack.Screen name='updateUser' component={UpdateUser} />
+          <Stack.Screen name='addToDo' component={AddToDo} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
