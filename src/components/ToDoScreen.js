@@ -1,7 +1,6 @@
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteTodo } from '../redux/ToDoReducer';
-import { useEffect } from 'react';
 
 export default function ToDoScreen({ route }) {
   const { user } = route.params;
@@ -13,11 +12,6 @@ export default function ToDoScreen({ route }) {
   };
 
   const userTodos = useSelector(state => state.todos.data);
-  console.log('User ID:', user.id);
-  console.log('User Todos:', userTodos);
-
-
-
   return (
     <View style={styles.container}>
       <FlatList
