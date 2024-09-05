@@ -9,17 +9,17 @@ export default function UserProfile({ route, navigation }) {
     const { status, error } = useSelector(state => state.todos);
 
     useEffect(() => {
-      dispatch(fetchTodos());
+        dispatch(fetchTodos());
     }, [dispatch])
 
     if (status === "loading") {
-      return <Text>Loading...</Text>
+        return <Text>Loading...</Text>
     }
     if (status === "failed") {
-      return <Text>Error: {error}</Text>
+        return <Text>Error: {error}</Text>
     }
 
-    
+
 
     return (
         <View style={styles.container}>
@@ -62,18 +62,21 @@ export default function UserProfile({ route, navigation }) {
                     <Text style={styles.value}>{user.address.zipcode}</Text>
                 </View>
             </View>
-            <TouchableOpacity
-                style={styles.button}
-                onPress={() => navigation.navigate('todo', {user: user})}
-            >
-                <Text style={styles.buttonText} >List To Do's</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-                style={styles.button}
-                onPress={() => navigation.navigate('addToDo', {user: user.id})}
-            >
-                <Text style={styles.buttonText} >Add To Do</Text>
-            </TouchableOpacity>
+            <View style={styles.buttonContainer}>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => navigation.navigate('todo', { user: user })}
+                >
+                    <Text style={styles.buttonText} >List To Do's</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => navigation.navigate('addToDo', { user: user })}
+                >
+                    <Text style={styles.buttonText} >Add To Do</Text>
+                </TouchableOpacity>
+            </View>
+
         </View>
     );
 }
@@ -119,6 +122,10 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: '400',
         color: '#2c3e50',
+    },
+    buttonContainer: {
+        flex:1,
+        justifyContent:'space-evenly'
     },
     button: {
         alignItems: 'center',
