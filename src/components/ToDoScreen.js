@@ -20,7 +20,6 @@ export default function ToDoScreen({ route }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>To-Do List</Text>
       <FlatList
         data={userTodos.filter(todo => todo.userId.toString() === user.id)}
         keyExtractor={(item) => item.id.toString()}
