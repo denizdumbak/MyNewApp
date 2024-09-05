@@ -1,9 +1,10 @@
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { deleteTodo } from '../redux/ToDoReducer';
+import { useEffect } from 'react';
 
 export default function ToDoScreen({ route }) {
-  const { todos } = route.params;
+  const { user } = route.params;
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {
@@ -11,11 +12,17 @@ export default function ToDoScreen({ route }) {
     dispatch(deleteTodo(id));
   };
 
+  const userTodos = useSelector(state => state.todos.data);
+  console.log('User ID:', user.id);
+  console.log('User Todos:', userTodos);
+
+
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>To-Do List</Text>
       <FlatList
-        data={todos}
+        data={userTodos.filter(todo => todo.userId.toString() === user.id)}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <View style={styles.todoItem}>
@@ -27,7 +34,7 @@ export default function ToDoScreen({ route }) {
             </View>
             <TouchableOpacity
               style={styles.deleteButton}
-              onPress={() =>handleDelete(item.id)}
+              onPress={() => handleDelete(item.id)}
             >
               <Text style={styles.deleteText}>Delete</Text>
             </TouchableOpacity>

@@ -6,8 +6,7 @@ import { fetchTodos } from '../redux/ToDoReducer';
 export default function UserProfile({ route, navigation }) {
     const { user } = route.params;
     const dispatch = useDispatch();
-    const { data, status, error } = useSelector(state => state.todos);
-    const userTodos = data.filter(todo => todo.userId == user.id);
+    const { status, error } = useSelector(state => state.todos);
 
     useEffect(() => {
       dispatch(fetchTodos());
@@ -65,9 +64,15 @@ export default function UserProfile({ route, navigation }) {
             </View>
             <TouchableOpacity
                 style={styles.button}
-                onPress={() => navigation.navigate('todo', {todos: userTodos})}
+                onPress={() => navigation.navigate('todo', {user: user})}
             >
-                <Text style={styles.buttonText} >To Do List</Text>
+                <Text style={styles.buttonText} >List To Do's</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.button}
+                onPress={() => navigation.navigate('addToDo', {user: user.id})}
+            >
+                <Text style={styles.buttonText} >Add To Do</Text>
             </TouchableOpacity>
         </View>
     );
