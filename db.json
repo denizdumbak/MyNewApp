@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Update Test",
-      "username": "update",
+      "username": "test",
       "email": "Sincere@april.biz",
       "address": {
         "street": "Kulas Light",
@@ -116,47 +116,9 @@
         "zipcode": "76495-3109"
       },
       "phone": "(775)976-6794 x41206"
-    },
-    {
-      "id": "10",
-      "name": "Clementina DuBuque",
-      "username": "Moriah.Stanton",
-      "email": "Rey.Padberg@karina.biz",
-      "address": {
-        "street": "Kattie Turnpike",
-        "suite": "Suite 198",
-        "city": "Lebsackbury",
-        "zipcode": "31428-2261"
-      },
-      "phone": "024-648-3804"
-    },
-    {
-      "id": "13",
-      "name": "test",
-      "username": "test0",
-      "email": "test@gmail.com",
-      "address": {
-        "street": "test",
-        "suite": "test",
-        "city": "test",
-        "zipcode": "test"
-      },
-      "phone": "5056497037"
     }
   ],
   "todos": [
-    {
-      "userId": 1,
-      "id": "5",
-      "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-      "completed": false
-    },
-    {
-      "userId": 1,
-      "id": "6",
-      "title": "qui ullam ratione quibusdam voluptatem quia omnis",
-      "completed": false
-    },
     {
       "userId": 1,
       "id": "7",
@@ -234,18 +196,6 @@
       "id": "19",
       "title": "molestiae ipsa aut voluptatibus pariatur dolor nihil",
       "completed": true
-    },
-    {
-      "userId": 1,
-      "id": "20",
-      "title": "ullam nobis libero sapiente ad optio sint",
-      "completed": true
-    },
-    {
-      "userId": 2,
-      "id": "21",
-      "title": "suscipit repellat esse quibusdam voluptatem incidunt",
-      "completed": false
     },
     {
       "userId": 2,
